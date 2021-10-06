@@ -31,4 +31,14 @@ public abstract class Warrior extends AnyCharacter {
     public void setCurrentWeapon(WeaponType currentWeapon) {
         this.currentWeapon = currentWeapon;
     }
+
+    public boolean checkWeaponInList(WeaponType weapon) {
+        return weapons.contains(weapon);
+    }
+
+    public void changeWeapon(WeaponType weapon) {
+        if (this.checkWeaponInList(weapon)) {
+            this.setCurrentWeapon(weapon);
+        }
+    }
 }

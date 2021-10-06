@@ -38,4 +38,28 @@ public class WarlockTest {
         assertEquals(CreatureType.OGRE, this.warlock.getCurrentCreature());
     }
 
+    @Test
+    public void canChangeSpell() {
+        this.warlock.changeSpell(SpellType.CURSE);
+        assertEquals(SpellType.CURSE, this.warlock.getCurrentSpell());
+    }
+
+    @Test
+    public void canNotChangeSpell() {
+        this.warlock.changeSpell(SpellType.LIGHTNING_STRIKE);
+        assertEquals(SpellType.FIREBALL, this.warlock.getCurrentSpell());
+    }
+
+    @Test
+    public void canChangeCreature() {
+        this.warlock.changeCreature(CreatureType.DRAGON);
+        assertEquals(CreatureType.DRAGON, this.warlock.getCurrentCreature());
+    }
+
+    @Test
+    public void canNotChangeCreature() {
+        this.warlock.changeCreature(CreatureType.OWL);
+        assertEquals(CreatureType.OGRE, this.warlock.getCurrentCreature());
+    }
+
 }

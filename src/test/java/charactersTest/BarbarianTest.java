@@ -31,4 +31,16 @@ public class BarbarianTest {
     public void hasDefaultWeapon() {
         assertEquals(WeaponType.CLUB, this.barbarian.getCurrentWeapon());
     }
+
+    @Test
+    public void canChangeWeapon() {
+        this.barbarian.changeWeapon(WeaponType.POTATO);
+        assertEquals(WeaponType.POTATO, this.barbarian.getCurrentWeapon());
+    }
+
+    @Test
+    public void canNotChangeWeapon() {
+        this.barbarian.changeWeapon(WeaponType.SWORD);
+        assertEquals(WeaponType.CLUB, this.barbarian.getCurrentWeapon());
+    }
 }

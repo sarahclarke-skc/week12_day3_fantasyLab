@@ -5,7 +5,6 @@ import equipments.WeaponType;
 
 public class Dwarf extends Warrior {
 
-
     public Dwarf(String name, int healthPoints, int damage, ArmourType armour) {
         super(name, healthPoints, damage, armour);
 
@@ -13,5 +12,4 @@ public class Dwarf extends Warrior {
         super.addWeapon(WeaponType.POTATO);
         super.setCurrentWeapon(this.getWeapons().get(0));
     }
-
 }

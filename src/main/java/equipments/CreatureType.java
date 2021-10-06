@@ -2,6 +2,7 @@ package equipments;
 
 public enum CreatureType {
 
+    OWL(3),
     OGRE(5),
     DRAGON(10);
 

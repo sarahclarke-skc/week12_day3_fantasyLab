@@ -55,5 +55,23 @@ public abstract class SpellCaster extends AnyCharacter {
         this.currentCreature = currentCreature;
     }
 
+    public boolean checkSpellInList(SpellType spell) {
+        return spells.contains(spell);
+    }
 
+    public boolean checkCreatureInList(CreatureType creature) {
+        return creatures.contains(creature);
+    }
+
+    public void changeSpell(SpellType spell) {
+        if (this.checkSpellInList(spell)) {
+            this.setCurrentSpell(spell);
+        }
+    }
+
+    public void changeCreature(CreatureType creature) {
+        if (this.checkCreatureInList(creature)) {
+            this.setCurrentCreature(creature);
+        }
+    }
 }
