@@ -1,5 +1,6 @@
 package characters.warriors;
 
+import characters.AnyCharacter;
 import equipments.ArmourType;
 import equipments.WeaponType;
 

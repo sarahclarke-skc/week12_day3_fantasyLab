@@ -1,5 +1,6 @@
 package characters.spellCasters;
 
+import characters.AnyCharacter;
 import equipments.ArmourType;
 import equipments.CreatureType;
 import equipments.SpellType;
@@ -18,4 +19,5 @@ public class Wizard extends SpellCaster {
         super.setCurrentCreature(this.getCreatures().get(0));
 
     }
+
 }

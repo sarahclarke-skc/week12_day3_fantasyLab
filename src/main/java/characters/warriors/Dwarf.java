@@ -1,5 +1,6 @@
 package characters.warriors;
 
+import characters.AnyCharacter;
 import equipments.ArmourType;
 import equipments.WeaponType;
 
@@ -12,4 +13,9 @@ public class Dwarf extends Warrior {
         super.addWeapon(WeaponType.POTATO);
         super.setCurrentWeapon(this.getWeapons().get(0));
     }
+//
+//    @Override
+//    public void fight(AnyCharacter attacker, AnyCharacter defender) {
+//
+//    }
 }

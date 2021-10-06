@@ -1,12 +1,13 @@
 package characters.warriors;
 
+import behaviours.ICanFight;
 import characters.AnyCharacter;
 import equipments.ArmourType;
 import equipments.WeaponType;
 
 import java.util.ArrayList;
 
-public abstract class Warrior extends AnyCharacter {
+public abstract class Warrior extends AnyCharacter implements ICanFight {
 
     private WeaponType currentWeapon;
     private ArrayList<WeaponType> weapons;
@@ -40,5 +41,12 @@ public abstract class Warrior extends AnyCharacter {
         if (this.checkWeaponInList(weapon)) {
             this.setCurrentWeapon(weapon);
         }
+    }
+
+    public void fight(Knight knight, AnyCharacter defender) {
+        int damage = knight.getCurrentWeapon().getStrength() * knight.getDamage();
+        int healthPoint = defender.getHealthPoints();
+        int result = healthPoint - damage;
+        defender.setHealthPoints(result);
     }
 }

@@ -1,5 +1,6 @@
 package characters.spellCasters;
 
+import characters.AnyCharacter;
 import equipments.ArmourType;
 import equipments.CreatureType;
 import equipments.SpellType;
