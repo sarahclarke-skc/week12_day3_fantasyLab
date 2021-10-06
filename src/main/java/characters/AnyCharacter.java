@@ -1,15 +1,17 @@
 package characters;
 
+import equipments.ArmourType;
+
 public abstract class AnyCharacter {
 
     private String name;
 
     private int healthPoints;
     private int damage;
-    private int armour;
+    private ArmourType armour;
     //    private int goldPieces;
 
-    public AnyCharacter(String name, int healthPoints, int damage, int armour) {
+    public AnyCharacter(String name, int healthPoints, int damage, ArmourType armour) {
         this.name = name;
         this.healthPoints = healthPoints;
         this.damage = damage;
@@ -40,11 +42,11 @@ public abstract class AnyCharacter {
         this.damage = damage;
     }
 
-    public int getArmour() {
+    public ArmourType getArmourType() {
         return armour;
     }
 
-    public void setArmour(int armour) {
+    public void setArmourType(ArmourType armour) {
         this.armour = armour;
     }
 

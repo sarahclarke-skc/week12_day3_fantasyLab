@@ -1,11 +1,12 @@
 package characters.warriors;
 
+import equipments.ArmourType;
 import equipments.WeaponType;
 
 public class Dwarf extends Warrior {
 
 
-    public Dwarf(String name, int healthPoints, int damage, int armour) {
+    public Dwarf(String name, int healthPoints, int damage, ArmourType armour) {
         super(name, healthPoints, damage, armour);
 
         super.addWeapon(WeaponType.AXE);

@@ -1,10 +1,11 @@
 package characters.warriors;
 
+import equipments.ArmourType;
 import equipments.WeaponType;
 
 public class Knight extends Warrior {
 
-    public Knight(String name, int healthPoints, int damage, int armour) {
+    public Knight(String name, int healthPoints, int damage, ArmourType armour) {
         super(name, healthPoints, damage, armour);
 
         super.addWeapon(WeaponType.SWORD);

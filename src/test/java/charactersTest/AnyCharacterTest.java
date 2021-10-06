@@ -2,6 +2,7 @@ package charactersTest;
 
 import characters.AnyCharacter;
 import characters.warriors.Barbarian;
+import equipments.ArmourType;
 import equipments.WeaponType;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,17 +15,12 @@ public class AnyCharacterTest {
 
     @Before
     public void before() {
-        anyCharacter = new Barbarian("BloodSeeker", 110, 3, 15);
+        anyCharacter = new Barbarian("BloodSeeker", 110, 3, ArmourType.HORNED_HELMET);
     }
 
     @Test
     public void hasName() {
         assertEquals("BloodSeeker", this.anyCharacter.getName());
     }
-
-//    @Test
-//    public void hasDefaultWeapon() {
-//        assertEquals(WeaponType.CLUB, this.anyCharacter.);
-//    }
 
 }
